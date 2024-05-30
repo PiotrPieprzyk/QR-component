@@ -1,88 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400&display=swap');
     
-    .attribution {
-      position: absolute;
-      bottom: 10px;
-      font-size: 11px;
-      text-align: center;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+    display parameter is related to font-display
+    read more: https://web.dev/learn/performance/optimize-web-fonts#font_rendering   
+    -->
 
-      a {
-        color: hsl(0, 0%, 6%);
-      }
-    }
-    
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #D5E1EF;
-      font-family: "Outfit", sans-serif;
-      font-optical-sizing: auto;
-    }
-    
-    .card {
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        width: 300px;
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./general.css">
+    <title>Frontend Mentor | QR code component</title>
 
-      .card__image {
-        width: 300px;
-        height: 300px;
-        border-radius: 10px;
-        background: url('./images/image-qr-code.png') center center / cover no-repeat;
-      }
-      
-      h1 {
-        color: #354056;
-        font-weight: 700;
-        font-size: 24px;
-        margin: 24px 0 16px 0;
-      }
-      p {
-        color: #8C8C94;
-        margin: 16px;
-        font-weight: 400;
-      }
-      .text--center {
-        text-align: center;
-      }
-      
-    }
-    
-  </style>
+    <!-- critical css -->
+    <style>
+        body {
+            visibility: hidden;
+            height: 100vh;
+            background-color: #a2cfea;
+        }
+        
+    </style>
+    <script src="critical.js"></script>
 </head>
 <body>
-
-  <article class="card">
-    <div class="card__image">
+    
+<article class="card">
+    <div class="card__wrapper-image">
+        <img class="card__image" src="assets/image-qr-code.png" alt="QR code">
     </div>
     <h1 class="text--center">
-      Improve your front-end skills by building projects
+        Improve your front-end skills by building projects
     </h1>
     <p class="text--center">
-      Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+        Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
     </p>
-  </article>
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+</article>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Piotr Pieprzyk</a>.
-  </div>
+</div>
 </body>
 </html>

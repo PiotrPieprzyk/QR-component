@@ -1,0 +1,95 @@
+/*
+     You can eliminate the need for a third-party connection by self-hosting your web fonts.
+     In most cases, self-hosting web fonts is faster than downloading them from a cross-origin.
+     If you plan on self-hosting web fonts, check that your site is using 
+     a Content Delivery Network (CDN), HTTP/2 or HTTP/3, and sets the correct caching headers for the web fonts
+     you need for your website.
+     https://web.dev/learn/performance/optimize-web-fonts#self-host_your_web_fonts
+     */
+
+/*@font-face {*/
+/*    font-family: 'Outfit';*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    src: url('./assets/Outfit-Regular.woff2') format('woff2');*/
+/*    font-display: optional;*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: 'Outfit';*/
+/*    font-style: normal;*/
+/*    font-weight: 700;*/
+/*    src: url('./assets/Outfit-Bold.woff2') format('woff2');*/
+/*    font-display: optional;*/
+/*}*/
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(0, 0%, 6%);
+    }
+}
+
+body {
+    visibility: visible !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+
+    .card__wrapper-image {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .card__image {
+        /*
+        Images by default have display:inline. That means they are treated as text and have a space below
+        reserved for descender elements. You can get rid of it in a number of ways:
+            - add a vertical-align:top rule to the image jsFiddle example
+            - add font-size:0; to the containing div jsFiddle example
+            - add display:block; to the image jsFiddle example
+        https://stackoverflow.com/questions/19212352/div-height-based-on-child-image-height-adds-few-extra-pixels-at-the-bottom
+        */
+        display: block;
+        width: 100%;
+        height: auto;
+        /*
+        To avoid CLS (Cumulative Layout Shift) we can use aspect-ratio property. 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio
+        */
+        aspect-ratio: 1/1;
+    }
+
+    h1 {
+        color: #354056;
+        font-weight: 700;
+        font-size: 24px;
+        margin: 24px 0 16px 0;
+    }
+
+    p {
+        color: #8C8C94;
+        margin: 16px;
+        font-weight: 400;
+    }
+
+    .text--center {
+        text-align: center;
+    }
+
+}
